@@ -4,6 +4,7 @@ import (
 	"strconv"
 )
 
+// function to validate weather `lexToken` contains a valid object
 func IsValidObject(lexToken []string) ([]string, bool) {
 	if len(lexToken) == 0 {
 		return lexToken, false
@@ -69,6 +70,7 @@ func IsValidObject(lexToken []string) ([]string, bool) {
 	return lexToken, true
 }
 
+// checks weather `lexToken` contains valid array
 func IsValidArray(lexToken []string) ([]string, bool) {
   if len(lexToken) == 0 {
     return lexToken, false
@@ -96,6 +98,7 @@ func IsValidArray(lexToken []string) ([]string, bool) {
   return lexToken, true
 }
 
+// weather the input is a valid json stirng type
 func IsValidString(input string) bool {
 	inputLen := len(input)
   if inputLen < 2 {
@@ -125,6 +128,7 @@ func IsValidString(input string) bool {
 	return true
 }
 
+// checks weather the input string can be converted to a valid number or not
 func IsValidNumber(input string) bool {
 	_, atoiErr := strconv.Atoi(input)
 	_, floatErr := strconv.ParseFloat(input, 64)
@@ -134,10 +138,12 @@ func IsValidNumber(input string) bool {
 	return true
 }
 
+// weather the input is a valid json bool data type
 func IsValidBoolean(input string) bool {
 	return input == "true" || input == "false"
 }
 
+// weather input is a valid null
 func IsValidNull(input string) bool {
 	return input == "null"
 }

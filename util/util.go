@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// entry function for validator
+// Validate the json file content 
 func Validate(content []byte) bool {
 	var result bool = false
 	var lexToken []string = Lexer(content)
@@ -14,7 +14,7 @@ func Validate(content []byte) bool {
 	return result
 }
 
-// clean up the spaces around the braces
+// clean up the spaces around the tokens
 func CleanUp(lexToken []string) []string {
 	lenLexToken := len(lexToken)
   var trimmedLexToken []string
@@ -27,6 +27,7 @@ func CleanUp(lexToken []string) []string {
 	return trimmedLexToken
 }
 
+// prints the json parser result
 func PrintResult(result bool) {
 	if result {
 		fmt.Printf("The file is a valid\n")

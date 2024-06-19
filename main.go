@@ -17,6 +17,9 @@ import (
 
 func main() {
 	var result bool = false
+  if len(os.Args) < 2 {
+    log.Fatal("not enough arguments")
+  }
 	jsonFileName := os.Args[1]
 	content, err := os.ReadFile(jsonFileName)
 	if err != nil {

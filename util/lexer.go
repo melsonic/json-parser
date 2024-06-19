@@ -1,5 +1,6 @@
 package util
 
+// does lexical analysis over the input json to create lex tokens
 func Lexer(content []byte) []string {
 	var isInsideString bool = false
 	var prevByte byte
