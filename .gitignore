@@ -1,0 +1,20 @@
+*jp
+*algo.md
+
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Vendor directory (for dependencies)
+vendor/
+
+# Logs
+logs/
+
+# IDE/editor specific files
+.vscode/
